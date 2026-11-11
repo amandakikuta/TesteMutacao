@@ -1,0 +1,37 @@
+[job-id] bf2c0307031a4f4c9a8fb87294ad40b3
+codigo/program.py core/ReplaceComparisonOperator_Gt_GtE 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+=== DIFF ===
+--- mutation diff ---
+--- a/codigo/program.py
++++ b/codigo/program.py
+@@ -24,7 +24,7 @@
+ # Entrada: duas notas (float).
+ # Saída: maior nota.
+ def maior_nota(nota1, nota2):
+-    if nota1 > nota2:
++    if nota1 >= nota2:
+         return nota1
+     return nota2
+ 
+============
+[job-id] 1a1c5413bd9d48d488cc4e50a79fb1a5
+codigo/program.py core/ReplaceComparisonOperator_GtE_Gt 2
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+=== DIFF ===
+--- mutation diff ---
+--- a/codigo/program.py
++++ b/codigo/program.py
+@@ -33,7 +33,7 @@
+ # Entrada: média atual do aluno (float).
+ # Saída: pontos restantes ou 0 se já estiver aprovado.
+ def pontos_para_aprovacao(media):
+-    if media >= 7:
++    if media > 7:
+         return 0
+     return 7 - media
+ 
+============
+total jobs: 112
+complete: 112 (100.00%)
+surviving mutants: 2 (1.79%)
